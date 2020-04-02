@@ -1,5 +1,8 @@
 Negozio chitarre
 
+il mio progetto è un negozio online di chitarre, formato dalle pagine :
+home, login, registrazione, profilo, ordini e un carrello
+
 cliente--N--acquistata--M--chitarra
 
 chitarre(CodChitarra,modello,marca,costo,prezzo)
