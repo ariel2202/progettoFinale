@@ -9,6 +9,4 @@ chitarre(CodChitarra,modello,marca,costo,prezzo)
 utenteRegistrato(codFiscale,nome,cognome,email,pass,(*)indirizzo,numeroCarta)
 acquisti(codOrdini,codChitarra,CodFiscale,data,quantità)
 
-(*)
-credo sia più ordinato ma è proprio necessario??..
 indirizzi(codCliente,via,numero,città,cap)
