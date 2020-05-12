@@ -7,7 +7,7 @@
     $tabella = "utentiRegistrati"; 
 
 
-    error_reporting(0); //No me muestra errores
+    error_reporting(0); //non mostra errori
 
 
     $connessione = new mysqli($host,$usuario,$pass,$nomeDB);
@@ -15,10 +15,6 @@
         echo 'vi è stato un errore durante la connessione';
         exit();
     }
-    /*$bello = "bello";
-    $as = $connessione -> query (" SELECT pChiave , sinonimo FROM pdb
-        WHERE pChiave = $bello");
-        $as -> execute();
-    */
+    
 
 ?>

@@ -1,12 +1,14 @@
 Negozio chitarre
 
-il mio progetto è un negozio online di chitarre, formato dalle pagine :
-home, login, registrazione, profilo, ordini e un carrello
+Negozio online di chitarre uniche, considerate quasi come delle opere
+d'arte.
+é formato dalle pagine :
+home, login, registrazione, profilo, pagamento
 
-cliente--N--acquistata--M--chitarra
+cliente--1--acquistata--M--chitarra
 
-chitarre(CodChitarra,modello,marca,costo,prezzo)
-utenteRegistrato(codFiscale,nome,cognome,email,pass,(*)indirizzo,numeroCarta)
-acquisti(codOrdini,codChitarra,CodFiscale,data,quantità)
+chitarre(CodChitarra,modello,marca,anno,prezzo)
+utenteRegistrato(codFiscale,nome,cognome,email,pass)
+acquisti(codOrdini,codChitarra,CodFiscale,data)
 
-indirizzi(codCliente,via,numero,città,cap)
+indirizzi(codFiscale,via,numero,città,cap)
