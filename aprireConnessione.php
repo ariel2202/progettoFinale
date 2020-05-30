@@ -4,8 +4,6 @@
     $pass = "12345";
     $nomeDB = "strumentiMusicali";
 
-    $tabella = "utentiRegistrati"; 
-
 
     error_reporting(0); //non mostra errori
 

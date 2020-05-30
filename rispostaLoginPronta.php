@@ -4,9 +4,11 @@
     $e = $_POST["email"];
     include("aprireConnessione.php");
 
+    $tabella = "utentiRegistrati";
         
     $sql = "SELECT nome ,cognome, email FROM $tabella WHERE pass = ? AND email = ?";
     //$sql = "SELECT nome ,cognome, email FROM $tabella WHERE pass = :pppp AND email = :qqqq";
+    
 
     if($result = $connessione->prepare($sql)){
         $result->bind_param("ss",$pa,$e);
@@ -27,7 +29,7 @@
             
             
             
-            header("Location:index.html");
+            header("Location:index.php");
         }
         else{
             echo "utente non registrato";

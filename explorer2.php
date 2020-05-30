@@ -55,7 +55,13 @@
                 if($result = $connessione->prepare($sql)){
                     $result->bind_param("ssss",$cod,$as,$data,$quantita);
                     $result->execute();
+
+                    echo"ciao ". $_SESSION['email'];
                     if($result){
+
+                        $a = "DELETE FROM chitarre where codChitarre ='$cod' ";
+                        $result = $connessione->query($a);
+                        
                         echo "acquisto effettuato con successo!!<br>";
                         echo "<a href='index.html'>torna all'home</a>";
                     }

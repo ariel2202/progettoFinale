@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+
+
+
+
 body {
     font-family: 'open sans';
 }
@@ -15,6 +19,8 @@ body {
     margin: auto;
     overflow: hidden;
 }
+
+
 
 .titolo {
     color: #642a73;
@@ -58,7 +64,7 @@ section a {
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #fff;
-    border-radius: 50px;
+    border-radius: 100px;
     background: rgb(62, 255, 3);
   }
 
