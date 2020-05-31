@@ -37,12 +37,13 @@ include("aprireConnessione.php");
                     
                 
                     $sql = "INSERT INTO acquisti (codChitarra, mailUtente, data, prezzo) VALUES (?, ?, ?, ?)";
-                    
-                    $quantita = 1;
+
+                    $prezzoo = $row['prezzo'];
+                   
                     $data = date ("Y/m/d");
                     $as = $_SESSION["email"];
                     if($result = $connessione->prepare($sql)){
-                        $result->bind_param("ssss",$cod,$as,$data,$quantita);
+                        $result->bind_param("ssss",$cod,$as,$data,$prezzoo);
                         $result->execute();
                         echo"ciao ". $_SESSION['email'];
                         

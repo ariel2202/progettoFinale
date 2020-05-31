@@ -8,7 +8,5 @@ home, login, registrazione, profilo, pagamento
 cliente--1--acquistata--M--chitarra
 
 chitarre(CodChitarra,modello,marca,anno,prezzo)
-utenteRegistrato(codFiscale,nome,cognome,email,pass)
-acquisti(codOrdini,codChitarra,CodFiscale,data)
-
-indirizzi(codFiscale,via,numero,città,cap)
+utenteRegistrato(nome,cognome,email,pass,indirizzo)
+acquisti(numeroOrdine,codChitarra,email,data,prezzoOrdine)

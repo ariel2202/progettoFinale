@@ -39,6 +39,7 @@
         $result->close();
     }
     else{
+        echo"<script>alert('accesso effettuato con successo')</script>";
         echo "errore di elaborazione";
     }
 

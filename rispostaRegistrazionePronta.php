@@ -15,7 +15,11 @@
             $result->bind_param("sssss",$cf,$nome,$cognome,$email,$Pass);
             $result->execute();
             if($result){
+
+                session_start();
+                $_SESSION["email"]=$_POST["email"];
                 echo "dati inseriti correttamente!!";
+                header("Location:index.php");
             }
             else{
                 echo "errore";

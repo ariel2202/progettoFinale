@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION["email"])){
+    header("Location:login.html");
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,8 +74,22 @@ th {
         <form class='contenitore' action="paginaChitarra.php" method="POST">
     
             <?php
+
+
+
         
-        session_start();
+       // session_start();
+
+
+       
+       if($_SESSION['email'] == 'arielpapy@hotmail.com'){
+        header("Location:aggiungiChitarra.php");
+
+    }
+
+        if(isset($_SESSION['email'])){
+
+        
 
 
                 include("aprireConnessione.php");
@@ -75,7 +101,7 @@ $sql = "SELECT * FROM acquisti WHERE mailUtente = '{$_SESSION['email']}'";
         
                 echo "<table class='contenuto-testo'>";
                 echo "<tr>";
-                    echo "<th>codice chitarra</th><th>mail utente</th><th>data</th>";
+                    echo "<th>numero ordine</th><th>codice chitarra</th><th>mail utente</th><th>data</th><th>prezzo</th>";
                 echo "</tr>";
         
                 
@@ -88,9 +114,11 @@ $sql = "SELECT * FROM acquisti WHERE mailUtente = '{$_SESSION['email']}'";
                    
                       
                         echo "<tr align='center'>";
+                        echo "<td>". $row["numeroOrdine"] . "</td>";
                         echo "<td>". $row["codChitarra"] . "</td>";
                         echo "<td>". $row["mailUtente"] . "</td>";
                         echo "<td>". $row["data"] . "</td>";
+                        echo "<td>". $row["prezzo"] . "</td>";
                      
                         
                         echo "</tr>";
@@ -113,6 +141,9 @@ $sql = "SELECT * FROM acquisti WHERE mailUtente = '{$_SESSION['email']}'";
                 }
         
                     include("chiudereConnessione.php");
+
+
+            }
         
         
         

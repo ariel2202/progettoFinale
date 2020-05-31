@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION["email"])){
+    header("Location:login.html");
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +75,8 @@ th {
 <?php
 
 $chiave;
-session_start();
+
+//session_start();
 
 include("aprireConnessione.php");
 
@@ -75,39 +89,29 @@ include("aprireConnessione.php");
         while($row = $result->fetch_assoc()){
             //echo"<br>" . $row['codiceChitarra'] . "<br>";
             if(isset($_POST[$row['codiceChitarra']])){
-               // echo"ciao ancora";
+               
                 $_SESSION['rrrr']=$_POST[$row['codiceChitarra']];
-                //$chiave = $row['codiceChitarra'];
+               
                 $_SESSION['chiave']= $row['codiceChitarra'];
-            /*    echo"qqqqq" . $row['modello'];
-                echo "<td><img src='{$row['immagine']}' width='140' height='110'></td>";
-
-
-                echo"<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post' id='form'>";
-
-                */
-
-
-           /*    echo"<form action=".$_SERVER['PHP_SELF']."method='post' id='form'>";
-                */
+         
                 echo"<form action='confermaAcquisto.php' method='post' id='form'>";
 
-                echo"<table align='center'>";
+                echo"<table align='center' class='contenuto-testo'>";
                 echo "<h2 class='titolo1'> ".$row['marca'] ." ". $row['modello']."</h2>";
                 echo"<br><section align='center'>";
+                echo"<section>";
                 echo"<img src='{$row['immagine']}' width='700' height='400'";
                 echo"</section>";
 
-                echo"<div>";
+                echo"<div class='contenitore'>";
 
-                echo"<h3><span>1</span>Descrizione</h3>
-                <p>Gibson 1964 SG Std.Rissue Maestro VOS - Cherry Red - con custodia rigida Gibson Custom ShopReissue ha prodotto.</p>
+                echo"<section class='contenitore su-di-noi'>";
+                echo"<h3><span></span>Descrizione</h3>
+                <p>".$row['descrizione']."</p>";
                 
-                <p>lineamenti
-                    generalmente
-                    Modello: Gibson 1964 SG Std.autenticità
-                    1 x Tag Hang Ristampa Storici</p>";
+                echo"</section>";
 
+                echo"</div>";
                     
 
                     /*
@@ -115,10 +119,11 @@ include("aprireConnessione.php");
                     <button type='submit' name='btn1' class='acquista'>Acquista qui</button>
                     </p>";
                     */
-                    echo"<p>";
-                    echo"<input class='acquista' type='submit' name='{$row ['codiceChitarra']}' value='ACQUISTA' id='{$row ['codiceChitarra']}'>";
+              //      echo"<p>";
+              /*      echo"<input class='acquista' type='submit' name='{$row ['codiceChitarra']}' value='ACQUISTA' id='{$row ['codiceChitarra']}'>";
                     echo"qui ". $row['codiceChitarra'];
-                    echo"</p>";
+                    */
+                //    echo"</p>";
 
                     echo "<tr>";
                     echo "<th>Prodotto</th><th>codice prodotto</th><th>utente</th><th>prezzo</th><th>acquista</th>";
