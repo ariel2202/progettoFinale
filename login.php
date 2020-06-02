@@ -34,7 +34,7 @@
         <div ALIGN="CENTER">
 
             torna all'<a href="index.php">home</a> o<br>
-            registrati <a href="registrazione.html">qui</a>
+            registrati <a href="registrazione.php">qui</a>
         </div>
 
     </form>

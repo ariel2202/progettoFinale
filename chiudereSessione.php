@@ -17,7 +17,7 @@ if(!isset($_SESSION["email"])){
 else{
    // session_start();
         session_destroy();
-        header("location:login.html");
+        header("location:login.php");
 }
         
 
