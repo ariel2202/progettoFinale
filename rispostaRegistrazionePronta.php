@@ -9,10 +9,13 @@
 
         include("aprireConnessione.php");
 
-        $sql = "INSERT INTO utentiregistrati (codiceFiscale, nome, cognome, email, pass) VALUES (?, ?, ?, ?, ?)";
+ /*       $sql = "INSERT INTO utentiregistrati (codiceFiscale, nome, cognome, email, pass) VALUES (?, ?, ?, ?, ?)";
+*/
+
+$sql = "INSERT INTO utentiregistrati (email, nome, cognome, pass) VALUES (?, ?, ?, ?)";
 
         if($result = $connessione->prepare($sql)){
-            $result->bind_param("sssss",$cf,$nome,$cognome,$email,$Pass);
+            $result->bind_param("ssss",$email,$nome,$cognome,$Pass);
             $result->execute();
             if($result){
 

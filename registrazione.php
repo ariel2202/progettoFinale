@@ -21,10 +21,10 @@
                 <input type="text" name="cognome" id="cognome"><span class="barra"></span>
                 <label for="">Cognome</label>
             </div>
-            <div class="gruppo">
+        <!--    <div class="gruppo">
                 <input type="text" name="codice" id="codice"><span class="barra"></span>
                 <label for="">Codice Fiscale</label>
-            </div>
+            </div> -->
             <div class="gruppo">
                 <input type="email" name="email" id="email" ><span class="barra"></span>
                 <label for="">email</label>

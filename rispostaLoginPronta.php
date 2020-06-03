@@ -33,7 +33,7 @@
         }
         else{
             echo "utente non registrato";
-            header("Location:login.html");
+            header("Location:login.php");
         }
         
         $result->close();
