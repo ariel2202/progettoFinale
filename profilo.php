@@ -53,8 +53,8 @@ th {
         <nav>
             <a href="index.php">Home</a>
             <a href="profilo.php">Profilo</a>
-            <a href="#guitar">Chitarre</a>
-            <a href="#servizi">Servizi</a>
+         <!--   <a href="#guitar">Chitarre</a>
+            <a href="#servizi">Servizi</a>-->
             <a href="chiudereSessione.php">logout</a>
         </nav>
         <section class="testo-header">
