@@ -88,7 +88,6 @@ th {
     
             <?php
         
-        echo "ciao";
                 include("aprireConnessione.php");
         
                                 

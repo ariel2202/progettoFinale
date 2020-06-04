@@ -92,8 +92,6 @@ div {
         <nav>
             <a href="index.php">Home</a>
             <a href="profilo.php">Profilo</a>
-            <a href="#guitar">Chitarre</a>
-            <a href="#servizi">Servizi</a>
             <a href="chiudereSessione.php">logout</a>
         </nav>
         <section class="testo-header">
@@ -161,7 +159,7 @@ include("aprireConnessione.php");
 
   echo "dati inseriti correttamente!!";
         echo"<br>";
-        echo"continua a inserire chitarre cliccando <a href='nuovaChitarra.php'>qui</a> ";
+        echo"continua a inserire chitarre cliccando <a href='aggiungiChitarra.php'>qui</a> ";
         echo"<br>";
         echo"<br>";
 

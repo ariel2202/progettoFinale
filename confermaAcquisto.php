@@ -45,11 +45,9 @@ include("aprireConnessione.php");
                     if($result = $connessione->prepare($sql)){
                         $result->bind_param("ssss",$cod,$as,$data,$prezzoo);
                         $result->execute();
-                        echo"ciao ". $_SESSION['email'];
                         
                         if($result){
-                            echo "<br>". $cod . "<br>";
-                            echo "<br>". $_SESSION['email'] . "<br>";
+                            echo "<br>grazie ". $_SESSION['email'] . "<br>";
 
                             $a = "DELETE FROM chitarre WHERE codiceChitarra ='$cod' ";
                             $result = $connessione->query($a);
