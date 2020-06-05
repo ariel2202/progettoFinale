@@ -9,8 +9,7 @@
 
         include("aprireConnessione.php");
 
- /*       $sql = "INSERT INTO utentiregistrati (codiceFiscale, nome, cognome, email, pass) VALUES (?, ?, ?, ?, ?)";
-*/
+ 
 
 $sql = "INSERT INTO utentiregistrati (email, nome, cognome, pass) VALUES (?, ?, ?, ?)";
 

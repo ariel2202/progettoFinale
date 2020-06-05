@@ -5,7 +5,7 @@
     $nomeDB = "strumentiMusicali";
 
 
-    error_reporting(0); //non mostra errori
+    error_reporting(0);
 
 
     $connessione = new mysqli($host,$usuario,$pass,$nomeDB);

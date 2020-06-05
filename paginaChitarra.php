@@ -55,8 +55,6 @@ th {
         <nav>
             <a href="index.php">Home</a>
             <a href="profilo.php">Profilo</a>
-         <!--   <a href="#guitar">Chitarre</a>
-            <a href="#servizi">Servizi</a>-->
             <a href="chiudereSessione.php">logout</a>
         </nav>
         <section class="testo-header">
@@ -87,7 +85,7 @@ include("aprireConnessione.php");
 
 
         while($row = $result->fetch_assoc()){
-            //echo"<br>" . $row['codiceChitarra'] . "<br>";
+           
             if(isset($_POST[$row['codiceChitarra']])){
                
                 $_SESSION['rrrr']=$_POST[$row['codiceChitarra']];
@@ -114,16 +112,6 @@ include("aprireConnessione.php");
                 echo"</div>";
                     
 
-                    /*
-                    echo"<p>
-                    <button type='submit' name='btn1' class='acquista'>Acquista qui</button>
-                    </p>";
-                    */
-              //      echo"<p>";
-              /*      echo"<input class='acquista' type='submit' name='{$row ['codiceChitarra']}' value='ACQUISTA' id='{$row ['codiceChitarra']}'>";
-                    echo"qui ". $row['codiceChitarra'];
-                    */
-                //    echo"</p>";
 
                     echo "<tr>";
                     echo "<th>Prodotto</th><th>codice prodotto</th><th>utente</th><th>prezzo</th><th>acquista</th>";
@@ -132,7 +120,6 @@ include("aprireConnessione.php");
                 echo"<tr>";
                 echo "<tr align='center'><td><img src='{$row['immagine']}' width='200' height='150'></td>";
                 echo "<td>". $row["codiceChitarra"] . "</td>";
-                //echo "<td>". $row["modello"] . "</td>";
                 echo "<td>". $_SESSION['email'] . "</td>";
                 
                 echo "<td>". $row["prezzo"] . "$</td>";

@@ -143,7 +143,6 @@ include("aprireConnessione.php");
                 echo"<tr>";
                 echo "<tr align='center'><td><img src='$immagine' width='200' height='150'></td>";
                 echo "<td>". $codice . "</td>";
-                //echo "<td>". $row["modello"] . "</td>";
                 echo "<td>". $modello . "</td>";
                 
                 echo "<td>". $marca . "</td>";
